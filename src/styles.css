@@ -3,3 +3,6 @@
 @import "tailwindcss";
 @import "tailwindcss-primeui";
 
+body {
+  font-family: "Roboto", sans-serif;
+}
