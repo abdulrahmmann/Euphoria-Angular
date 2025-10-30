@@ -1,1 +1,110 @@
-<p>signup works!</p>
+<main class="h-screen w-screen bg-auth-overlay overflow-hidden">
+  <div class="relative h-full flex items-center justify-center">
+    <div class="container mx-auto px-3 h-full flex items-center justify-center">
+
+      <div class="max-w-[1050px] w-full max-h-[600px] h-full mx-auto">
+        <div class="grid grid-cols-12 rounded-lg h-full">
+          <div
+            class="col-span-12 md:col-span-5 bg-[#f7f9fb] rounded-xl md:rounded-none md:rounded-tl-xl md:rounded-bl-xl">
+            <div class="h-full flex items-center justify-center">
+              <div class="md:max-w-[400px] w-full px-6 sm:px-10 md:px-4">
+                <!-- Logo -->
+                <div class="mb-2">
+                  <img src="/Logo.svg" alt="Logo" class="h-20 mx-auto"/>
+                </div>
+
+                <!-- Texts -->
+                <div class="text-center gradient-text mb-5">
+                  <h1 class="font-bold text-xl mb-2">Create Your Account</h1>
+                  <p class="text-sm font-medium">Sign up to get started with Euphoria</p>
+                </div>
+
+                <!-- Form -->
+                <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+                  <div class="mb-3">
+                    <label class="block text-sm mb-1">Email</label>
+                    <input pInputText
+                           type="text"
+                           id="email"
+                           name="email"
+                           placeholder="Enter your email"
+                           formControlName="signupEmail"
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="block text-sm mb-1">Password</label>
+                    <p-password
+                      [toggleMask]="true"
+                      [showClear]="true"
+                      id="password"
+                      name="password"
+                      placeholder="Enter your email"
+                      formControlName="signupPassword"
+                    >
+                      <ng-template #header>
+                        <div class="font-semibold text-xm mb-4">Reset Password</div>
+                      </ng-template>
+                      <ng-template #footer>
+                        <p-divider />
+                        <ul class="pl-2 my-0 leading-normal">
+                          <li>At least one lowercase</li>
+                          <li>At least one uppercase</li>
+                          <li>At least one numeric</li>
+                          <li>At least one special</li>
+                          <li>Minimum 8 characters</li>
+                        </ul>
+                      </ng-template>
+                    </p-password>
+                  </div>
+
+                  <div>
+                    <div class="flex items-center mb-1.5">
+                      <p-checkbox inputid="remember" name="remember" value="remember">
+                        <div data-p-highlight="false" data-p-checked="false" class="p-checkbox p-component">
+                          <input type="checkbox" value="remember" id="remember" name="remember"
+                                 class="p-checkbox-input">
+                          <div class="p-checkbox-box">
+                          </div>
+                        </div>
+                      </p-checkbox>
+                      <label for="remember" class="ml-2 mt-1 text-sm">Agree to our Terms of use and Privacy Policy</label>
+                    </div>
+                    <div class="flex items-center">
+                      <p-checkbox inputid="remember" name="remember" value="remember">
+                        <div data-p-highlight="false" data-p-checked="false" class="p-checkbox p-component">
+                          <input type="checkbox" value="remember" id="remember" name="remember"
+                                 class="p-checkbox-input">
+                          <div class="p-checkbox-box">
+                          </div>
+                        </div>
+                      </p-checkbox>
+                      <label for="remember" class="ml-2 mt-1 text-sm">Subscribe to our monthly newsletter</label>
+                    </div>
+                  </div>
+
+                  <button type="submit"
+                          class="w-full rounded-lg bg-primary p-3 text-white text-base font-medium block mt-6 text-center cursor-pointer hover:bg-theme-2">
+                    Register
+                  </button>
+
+                  <div class="text-sm font-normal mt-5 text-center text-secondary-dark-text">
+                    Already have any account?
+                    <a routerLink="/login" class="text-primary font-medium cursor-pointer hover:underline">Login</a>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-span-12 md:col-span-7 hidden md:block bg-auth5 bg-cover bg-top bg-no-repeat rounded-tr-xl rounded-br-xl">
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
