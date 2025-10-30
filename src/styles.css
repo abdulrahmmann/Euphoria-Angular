@@ -3,6 +3,112 @@
 @import "tailwindcss";
 @import "tailwindcss-primeui";
 
+html,
 body {
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: #f7f9fb;
+  /*color: #3C4242;*/
+  color: #475569;
+  line-height: 1.25rem;
+  min-height: 100vh;
+  height: 100%;
+}
+
+:root {
+  --color-theme-1: rgba(55, 48, 163, 0.8);
+  --color-theme-2: rgb(30 58 138);
+  --color-primary: rgb(55 48 163);
+  --color-secondary: rgb(226 232 240);
+  --color-success: rgb(13 148 136);
+  --color-info: rgb(8 145 178);
+  --color-warning: rgb(202 138 4);
+  --color-pending: rgb(194 65 12);
+  --color-danger: rgb(185 28 28);
+  --color-light: rgb(241 245 249);
+  --color-dark: rgb(30 41 59);
+
+  --color-primary-text: #3C4242;
+  --color-secondary-dark-text: #807D7E;
+  --color-secondary-light-text: #BEBCBD;
+  --color-lavender-gray-text: #EDEEF2;
+  --color-white-gray-text: #F6F6F6;
+}
+
+@theme {
+  --font-bebasNeue: "Roboto", sans-serif;
+
+  /* COLORS */
+  --color-theme-1: var(--color-theme-1);
+  --color-theme-2: var(--color-theme-2);
+
+  --color-theme-1-80: rgba(15, 23, 42, 0.80);
+  --color-theme-2-80: rgba(30, 41, 59, 0.80);
+
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-success: var(--color-success);
+  --color-info: var(--color-info);
+  --color-warning: var(--color-warning);
+  --color-pending: var(--color-pending);
+  --color-danger: var(--color-danger);
+  --color-light: var(--color-light);
+  --color-dark: var(--color-dark);
+
+  --color-primary-text: var(--color-primary-text);
+  --color-secondary-dark-text: var(--color-secondary-dark-text);
+  --color-secondary-light-text: var(--color-secondary-light-text);
+  --color-lavender-gray-text: var(--color-lavender-gray-text);
+  --color-white-gray-text: var(--color-white-gray-text);
+
+  /* BACKGROUND IMAGES */
+  --background-image-overlay: url("../public/bg-overlay.svg");
+  --background-image-auth1: url("../public/bg-auth-1.jpg");
+  --background-image-auth2: url("../public/bg-auth-2.jpg");
+  --background-image-auth3: url("../public/bg-auth-3.jpg");
+  --background-image-auth4: url("../public/bg-auth-4.jpg");
+  --background-image-auth5: url("../public/bg-auth-5.jpg");
+  --background-image-auth6: url("../public/bg-auth-6.jpg");
+  --background-image-auth7: url("../public/bg-auth-7.jpg");
+  --background-image-auth8: url("../public/bg-auth-8.jpg");
+  --background-image-auth9: url("../public/bg-auth-9.jpg");
+
+  --background-image-gradient-100: linear-gradient(
+    to top,
+    var(--color-theme-1),
+    var(--color-theme-2)
+  );
+
+  /* SHADOWS */
+  --shadow-100: 0px 1px 3px 0px rgba(16, 24, 40, 0.1),
+}
+
+.bg-auth-overlay {
+  @apply bg-gradient-to-b from-theme-1 to-theme-2 before:absolute before:bg-overlay before:bg-right before:bg-no-repeat before:bg-cover before:w-full before:h-full
+}
+
+.gradient-text {
+  background: linear-gradient(to right, var(--color-primary), var(--color-theme-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.p-inputtext {
+  @apply bg-transparent! w-full text-primary-text! h-10! border-primary-text!;
+}
+.p-checkbox-box {
+  @apply bg-transparent! border-primary!;
+}
+
+.p-checkbox-checked .p-checkbox-box {
+  @apply bg-theme-1!;
+}
+
+.p-checkbox-checked .p-checkbox-icon {
+  @apply text-white! size-3!;
+}
+
+.p-password {
+  @apply w-full!;
 }
