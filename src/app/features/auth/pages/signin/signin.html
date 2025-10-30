@@ -19,6 +19,8 @@
                   <p class="text-sm font-medium">Sign in to your account</p>
                 </div>
 
+                <p-toast />
+
                 <!-- Form -->
                 <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
                   <div class="mb-3">
@@ -72,7 +74,6 @@
                     Don't have any account?
                     <a routerLink="/register" class="text-primary font-medium cursor-pointer hover:underline">Register</a>
                   </div>
-
                 </form>
 
                 <div class="flex items-center gap-2 mt-5">
@@ -82,14 +83,14 @@
                 </div>
 
                 <div class="flex items-center gap-3 mt-5">
-                  <a class="cursor-pointer flex items-center justify-center gap-2 bg-[#F8FAF9] border border-secondary-light-text text-xs text-primary-text rounded-3xl p-3 w-full">
+                  <button class="cursor-pointer flex items-center justify-center gap-2 bg-[#F8FAF9] border border-secondary-light-text text-xs text-primary-text rounded-3xl p-3 w-full">
                     <img src="/icons/google.svg" alt="" class="size-4">
                     Signin with Google
-                  </a>
-                  <a class="cursor-pointer flex items-center justify-center gap-2 bg-[#F8FAF9] border border-secondary-light-text text-xs text-primary-text rounded-3xl p-3 w-full">
+                  </button>
+                  <button class="cursor-pointer flex items-center justify-center gap-2 bg-[#F8FAF9] border border-secondary-light-text text-xs text-primary-text rounded-3xl p-3 w-full">
                     <img src="/icons/apple.svg" alt="" class="size-4">
                     Signin with Apple
-                  </a>
+                  </button>
                 </div>
 
               </div>
