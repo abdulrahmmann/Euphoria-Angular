@@ -1,0 +1,42 @@
+<main class="h-screen w-screen bg-auth-overlay overflow-hidden">
+  <div class="relative h-full flex items-center justify-center">
+    <div class="container mx-auto px-3 h-full flex items-center justify-center">
+
+      <div class="max-w-[1050px] w-full max-h-[600px] h-full mx-auto">
+        <div class="grid grid-cols-12 rounded-lg h-full">
+          <div
+            class="col-span-12 md:col-span-5 bg-[#f7f9fb] rounded-xl md:rounded-none md:rounded-tl-xl md:rounded-bl-xl">
+            <div class="h-full flex items-center justify-center">
+              <div class="md:max-w-[400px] w-full px-6 sm:px-10 md:px-4">
+                <!-- Logo -->
+                <div class="mb-2">
+                  <img src="/Logo.svg" alt="Logo" class="h-20 mx-auto"/>
+                </div>
+
+                <!-- Texts -->
+                <div class="text-center gradient-text mb-5">
+                  <h1 class="font-bold text-xl mb-2">Check Email</h1>
+                  <p class="text-sm font-medium">
+                    Please check your email inbox and click on the provided link to reset your password.
+                    If you don’t receive email, <br /> <a class="text-primary font-bold cursor-pointer hover:underline">Click here to resend.</a>
+                  </p>
+                </div>
+
+                <a routerLink="/login"
+                        class="w-full rounded-lg bg-primary p-3 text-white text-base font-medium block mt-6 text-center cursor-pointer hover:bg-theme-2">
+                  Back to Login
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-span-12 md:col-span-7 hidden md:block bg-auth7 bg-cover bg-top bg-no-repeat rounded-tr-xl rounded-br-xl">
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>

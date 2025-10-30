@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import {InputText} from "primeng/inputtext";
 import {FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-forgot-password',
-    imports: [
-        InputText,
-        ReactiveFormsModule,
-    ],
+  imports: [
+    InputText,
+    ReactiveFormsModule,
+    RouterLink,
+  ],
   templateUrl: './forgot-password.html',
   styles: ``,
 })
