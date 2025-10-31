@@ -45,16 +45,16 @@
                       formControlName="signupPassword"
                     >
                       <ng-template #header>
-                        <div class="font-semibold text-xm mb-4">Reset Password</div>
+                        <div class="font-semibold text-xm mb-4">Create Password</div>
                       </ng-template>
                       <ng-template #footer>
                         <p-divider />
                         <ul class="pl-2 my-0 leading-normal">
+                          <li>Minimum 8 characters</li>
                           <li>At least one lowercase</li>
                           <li>At least one uppercase</li>
                           <li>At least one numeric</li>
                           <li>At least one special</li>
-                          <li>Minimum 8 characters</li>
                         </ul>
                       </ng-template>
                     </p-password>
@@ -85,14 +85,11 @@
                     </div>
                   </div>
 
-                  <button type="submit"
-                          class="w-full rounded-lg bg-primary p-3 text-white text-base font-medium block mt-6 text-center cursor-pointer hover:bg-theme-2">
-                    Register
-                  </button>
+                  <button type="submit" class="btn-auth-submit">Register</button>
 
                   <div class="text-sm font-normal mt-5 text-center text-secondary-dark-text">
                     Already have any account?
-                    <a routerLink="/login" class="text-primary font-medium cursor-pointer hover:underline">Login</a>
+                    <a routerLink="/auth/login" class="text-primary font-medium cursor-pointer hover:underline">Login</a>
                   </div>
 
                 </form>
@@ -101,7 +98,7 @@
           </div>
 
           <div
-            class="col-span-12 md:col-span-7 hidden md:block bg-auth5 bg-cover bg-top bg-no-repeat rounded-tr-xl rounded-br-xl">
+            class="auth-bg-overlay col-span-12 md:col-span-7 hidden md:block bg-auth5 bg-cover bg-top bg-no-repeat rounded-tr-xl rounded-br-xl">
 
           </div>
         </div>
